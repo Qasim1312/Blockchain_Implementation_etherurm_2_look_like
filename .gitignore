@@ -1,0 +1,9 @@
+.qodo
+.vscode
+
+# Ignore logs directory only inside cmd/
+cmd/logs/
+
+# Ignore all .exe and .txt files
+*.exe
+*.txt

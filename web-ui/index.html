@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blockchain Visualizer</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Blockchain Visualizer</h1>
+      <div class="connection-status">
+        <span id="status-indicator"></span>
+        <span id="connection-text">Connecting...</span>
+      </div>
+    </div>
+    
+    <div class="node-selector-panel">
+      <label for="node-selector">Select Node:</label>
+      <select id="node-selector">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+      <div class="current-node-info">
+        Viewing: <span id="current-node">Node 1</span>
+      </div>
+    </div>
+    
+    <div class="control-panel">
+      <button id="refresh-btn">Refresh Data</button>
+    </div>
+    
+    <div class="stats-panel">
+      <div class="stat-box">
+        <div class="stat-title">Blockchain Height</div>
+        <div class="stat-value" id="chain-height">-</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Network Nodes</div>
+        <div class="stat-value" id="node-count">-</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Latest Block Nonce</div>
+        <div class="stat-value highlight-nonce" id="latest-nonce">-</div>
+      </div>
+    </div>
+    
+    <div class="blockchain-container">
+      <h2>Blockchain</h2>
+      <div class="blockchain" id="blockchain-display">
+        <div class="loading">Loading blockchain data...</div>
+      </div>
+    </div>
+    
+    <div class="panel-container">
+      <div class="network-panel">
+        <h2>Network Nodes</h2>
+        <div id="nodes-display">
+          <div class="loading">Loading network data...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
